@@ -1,0 +1,5 @@
+line_profiler
+memory_profiler
+nose
+numpy
+scipy
