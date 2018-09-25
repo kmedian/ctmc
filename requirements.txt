@@ -1,5 +1,6 @@
 line_profiler
 memory_profiler
+matplotlib
 nose
 numpy
 scipy
