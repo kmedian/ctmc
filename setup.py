@@ -17,7 +17,10 @@ setup(name='ctmc',
       license='MIT',
       packages=['ctmc'],
       install_requires=[
-          'setuptools', 'nose', 'numpy', 'scipy',
-          'scikit-learn'],
-      python_requires='>=3',
+          'setuptools>=40.0.0',
+          'nose>=1.3.7',
+          'numpy>=1.14.5',
+          'scipy>=1.1.0',
+          'scikit-learn>=0.19.2'],
+      python_requires='>=3.6',
       zip_safe=False)
