@@ -7,7 +7,7 @@ def read(fname):
 
 
 setup(name='ctmc',
-      version='0.1.0',
+      version='0.1.1',
       description='Continous Time Markov Chain',
       long_description=read('README.md'),
       long_description_content_type='text/markdown',
@@ -16,6 +16,6 @@ setup(name='ctmc',
       author_email='554c46@gmail.com',
       license='MIT',
       packages=['ctmc'],
-      install_requires=['setuptools', 'nose', 'numpy', 'scipy'],
+      install_requires=['setuptools', 'nose', 'numpy', 'scipy', 'scikit-learn'],
       python_requires='>=3',
       zip_safe=False)

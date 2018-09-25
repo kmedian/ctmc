@@ -3,3 +3,4 @@ memory_profiler
 nose
 numpy
 scipy
+scikit-learn
