@@ -7,7 +7,8 @@ from .simulate import simulate
 class Ctmc(BaseEstimator):
     """Continous Time Markov Chain, sklearn API class"""
 
-    def __init__(self, numstates=None, transintv=1.0, toltime=1e-8, debug=False):
+    def __init__(self, numstates=None, transintv=1.0,
+                 toltime=1e-8, debug=False):
         self.numstates = numstates
         self.transintv = transintv
         self.toltime = toltime
