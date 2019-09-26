@@ -1,8 +1,8 @@
-
 import numpy as np
 
 
-def generatormatrix(transcount, statetime):
+def generatormatrix(transcount: np.ndarray,
+                    statetime: np.ndarray) -> np.ndarray:
 
     tmp = transcount.copy()
     n = tmp.shape[0]

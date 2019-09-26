@@ -1,8 +1,8 @@
-
 import numpy as np
 
 
-def errorcheck(transcount, statetime, toltime):
+def errorcheck(transcount: np.ndarray, statetime: np.ndarray,
+               toltime: float) -> bool:
     # check transitions counting went wrong
     if np.any(np.diag(transcount) != 0):
         raise Exception(

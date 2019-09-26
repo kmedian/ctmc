@@ -1,8 +1,7 @@
-
 import numpy as np
 
 
-def datacheck(data, numstates, toltime):
+def datacheck(data: list, numstates: int, toltime: float) -> bool:
 
     eligiblestates = range(numstates)
 

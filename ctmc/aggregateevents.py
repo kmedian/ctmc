@@ -1,9 +1,8 @@
-
 import scipy.sparse
 import numpy as np
 
 
-def aggregateevents(data, numstates):
+def aggregateevents(data: list, numstates: int) -> (np.ndarray, np.ndarray):
 
     transcount = scipy.sparse.lil_matrix((numstates, numstates), dtype=int)
     statetime = np.zeros(numstates, dtype=float)

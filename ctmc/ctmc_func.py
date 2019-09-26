@@ -1,12 +1,14 @@
-
 from .datacheck import datacheck
 from .aggregateevents import aggregateevents
 from .errorcheck import errorcheck
 from .generatormatrix import generatormatrix
 import scipy.linalg
+import numpy as np
 
 
-def ctmc(data, numstates, transintv=1.0, toltime=1e-8, debug=False):
+def ctmc(data: list, numstates: int, transintv: float = 1.0,
+         toltime: float = 1e-8, debug: bool = False
+         ) -> (np.ndarray, np.ndarray, np.ndarray, np.ndarray):
     """ Continous Time Markov Chain
 
     Parameters

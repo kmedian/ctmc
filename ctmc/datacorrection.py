@@ -1,5 +1,5 @@
 
-def datacorrection(datalist, toltime=1e-8):
+def datacorrection(datalist: list, toltime: float = 1e-8) -> list:
 
     newlist = list()
 

@@ -1,20 +1,20 @@
-
 from sklearn.base import BaseEstimator
 from .ctmc_func import ctmc
 from .simulate import simulate
+import numpy as np
 
 
 class Ctmc(BaseEstimator):
     """Continous Time Markov Chain, sklearn API class"""
 
-    def __init__(self, numstates=None, transintv=1.0,
-                 toltime=1e-8, debug=False):
+    def __init__(self, numstates: int = None, transintv: float = 1.0,
+                 toltime: float = 1e-8, debug: bool = False):
         self.numstates = numstates
         self.transintv = transintv
         self.toltime = toltime
         self.debug = debug
 
-    def fit(self, X, y=None):
+    def fit(self, X: list, y=None):
         """Calls the ctmc.ctmc function
 
         Parameters
@@ -29,7 +29,7 @@ class Ctmc(BaseEstimator):
             X, self.numstates, self.transintv, self.toltime, self.debug)
         return self
 
-    def predict(self, X, steps=1):
+    def predict(self, X: np.ndarray, steps: int = 1) -> np.ndarray:
         """
         Parameters
         ----------

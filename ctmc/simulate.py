@@ -1,8 +1,8 @@
-
 import numpy as np
 
 
-def simulate(s0, transmat, steps=1):
+def simulate(s0: np.ndarray, transmat: np.ndarray,
+             steps: int = 1) -> np.ndarray:
     """Simulate the next state
 
     Parameters

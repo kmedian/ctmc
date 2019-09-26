@@ -1,3 +1,7 @@
+# 0.1.3 / 2019-09-26
+
+  * add type hints
+
 # 0.1.2 / 2018-10-04
 
 * Comply to sklearn's instantiation rule, http://scikit-learn.org/stable/developers/contributing.html#instantiation
