@@ -26,7 +26,7 @@ class Test_Errorcheck(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             ctmc.errorcheck(transcount, statetime, toltime)
 
-        print("\ntest2: " + str(context.exception))
+        # print("\ntest2: " + str(context.exception))
         self.assertTrue(
             'is smaller than toltime'
             in str(context.exception))
