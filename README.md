@@ -21,7 +21,7 @@ pip install ctmc
 
 
 ## Usage
-Check the [examples](examples) folder for notebooks.
+Check the [examples](https://github.com/kmedian/ctmc/tree/master/examples) folder for notebooks.
 
 
 ## Commands
@@ -33,7 +33,7 @@ Check the [examples](examples) folder for notebooks.
 
 
 ## Debugging
-* Notebooks to profile python code are in the [profile](profile) folder
+* Notebooks to profile python code are in the [profile](https://github.com/kmedian/ctmc/tree/master/profile) folder
 
 
 ## Support
