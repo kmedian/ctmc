@@ -2,12 +2,13 @@ from .datacheck import datacheck
 from .aggregateevents import aggregateevents
 from .errorcheck import errorcheck
 from .generatormatrix import generatormatrix
+from .datacorrection import datacorrection
 import scipy.linalg
 import numpy as np
 
 
 def ctmc(data: list, numstates: int, transintv: float = 1.0,
-         toltime: float = 1e-8, debug: bool = False
+         toltime: float = 1e-8, autocorrect: bool = False, debug: bool = False
          ) -> (np.ndarray, np.ndarray, np.ndarray, np.ndarray):
     """ Continous Time Markov Chain
 
@@ -30,6 +31,9 @@ def ctmc(data: list, numstates: int, transintv: float = 1.0,
         (If debug=True) Will throw an exception if the aggregated state
         duration or aggregated time periods of any state is smaller
         than toltime.
+
+    autocorrect : bool
+        (Default: False) If True run ctmc.datacorretion function.
 
     debug : bool
         (Default: False) If True run the ctmc.datacheck function.
@@ -87,6 +91,10 @@ def ctmc(data: list, numstates: int, transintv: float = 1.0,
         ctmc.errorcheck(transcount, statetime, toltime)
 
     """
+    # auto-correct data list
+    if autocorrect:
+        data = datacorrection(data, toltime)
+
     # raise an exception if the data format is wrong
     if debug:
         datacheck(data, numstates, toltime)

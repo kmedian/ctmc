@@ -8,10 +8,12 @@ class Ctmc(BaseEstimator):
     """Continous Time Markov Chain, sklearn API class"""
 
     def __init__(self, numstates: int = None, transintv: float = 1.0,
-                 toltime: float = 1e-8, debug: bool = False):
+                 toltime: float = 1e-8, autocorrect: bool = False,
+                 debug: bool = False):
         self.numstates = numstates
         self.transintv = transintv
         self.toltime = toltime
+        self.autocorrect = autocorrect
         self.debug = debug
 
     def fit(self, X: list, y=None):
@@ -26,7 +28,11 @@ class Ctmc(BaseEstimator):
             not used, present for API consistence purpose.
         """
         self.transmat, self.genmat, self.transcount, self.statetime = ctmc(
-            X, self.numstates, self.transintv, self.toltime, self.debug)
+            X, numstates=self.numstates,
+            transintv=self.transintv,
+            toltime=self.toltime,
+            autocorrect=self.autocorrect,
+            debug=self.debug)
         return self
 
     def predict(self, X: np.ndarray, steps: int = 1) -> np.ndarray:

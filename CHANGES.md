@@ -1,6 +1,8 @@
 # 0.1.3 / 2019-09-26
 
   * add type hints
+  * add unit tests
+  * automatic data correction in ctmc.ctmc and ctmc.Ctmc
 
 # 0.1.2 / 2018-10-04
 
